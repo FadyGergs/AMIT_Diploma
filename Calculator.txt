@@ -38,8 +38,3 @@ def calculation(command, num1, num2):
     else:
         result = "Invalid command"
     return result
-
-if __name__ == "__main__":
-    command, num1, num2 = get_input()
-    result = calculation(command, num1, num2)
-    print(" The Result is :", result)
