@@ -1,0 +1,45 @@
+# mini project
+# create the calc.py script
+
+def add(x, y):
+    return x + y
+
+def sub(x, y):
+    return x - y
+
+def mult(x, y):
+    return x * y
+
+def div(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Division by zero not allowed"
+
+# create the main.py script
+
+import calc
+
+def get_input():
+    command = input("Enter (add, sub, mult, div): ")
+    num1 = float(input("Enter the 1st number: "))
+    num2 = float(input("Enter the 2nd number: "))
+    return command, num1, num2
+
+def calculation(command, num1, num2):
+    if command == "add":
+        result = calc.add(num1, num2)
+    elif command == "sub":
+        result = calc.sub(num1, num2)
+    elif command == "mult":
+        result = calc.mult(num1, num2)
+    elif command == "div":
+        result = calc.div(num1, num2)
+    else:
+        result = "Invalid command"
+    return result
+
+if __name__ == "__main__":
+    command, num1, num2 = get_input()
+    result = calculation(command, num1, num2)
+    print(" The Result is :", result)
