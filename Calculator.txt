@@ -38,3 +38,4 @@ def calculation(command, num1, num2):
     else:
         result = "Invalid command"
     return result
+print("Result:", result)
